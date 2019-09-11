@@ -150,25 +150,7 @@ header {
     transition: all 0.125s;
     -webkit-transition: all 0.125s;
 }
-.pattern_1 {
-    background: url('../images/logo1-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-.pattern_2 {
-    background: url('../images/logo2-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.pattern_3 {
-    background: url('../images/logo3-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .top_menu {
     padding: 0;
     margin: 0;
