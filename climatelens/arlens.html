@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+    <script defer src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
     <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
     <script src="//codeawesome.s3-us-west-2.amazonaws.com/dulce303/assets/xrextras-climatelens.js" ></script>
     <script src="./assets/js/gesture-detector.js"></script>
@@ -58,7 +59,7 @@
         <a-light type="ambient" intensity="1"></a-light>
         <!-- Add extra lighting to highlight the 3d geometry of the image frame. -->
         <a-light type="directional" intensity="1" target="#frame" position="1.5 0.6 2.5"> </a-light>
-        <a-entity id="water1" position="-0.5 0 -2" class="cantap" hold-drag two-finger-spin pinch-scale scale="0.016 0.016 0.016" rotation="0 0 0" gltf-model="#water1-glb"></a-entity>
+        <a-entity id="water1" position="-0.5 0 -2" class="cantap" hold-drag two-finger-spin pinch-scale scale="0.016 0.016 0.016" rotation="0 0 0" gltf-model="#water1-glb" animation-mixer="loop: repeat"></a-entity>
         
         <a-entity
         id="ground"
