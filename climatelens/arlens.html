@@ -1,108 +1,192 @@
-<!DOCTYPE HTML>
-<!--
-	Ethereal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ethereal by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Climate Lens WebXR App</title>
 
-				<!-- Wrapper -->
-					<div id="wrapper">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css?v=201905161239">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam1"></iframe>
-									<ul class="actions">
-										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-							</section>
+    <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+    <script src="//s3-us-west-2.amazonaws.com/codeawesome/moad/xrextras.js"></script>
+    <script src="./assets/js/gesture-detector.js"></script>
+    <script src="./assets/js/hold-drag.js"></script>
+    <script src="./assets/js/pinch-scale.js"></script>
+    <script src="./assets/js/two-finger-spin.js"></script>
+    <script src="./assets/js/photomode.js"></script>
+    <script
+    src="//apps.8thwall.com/xrweb?appKey=kxVKZm2XSJGCWSJQLuFI51DYAcTBS00SkFdoQZvWrZgspAJG2JVp87P2lvGDA8dqTnR5lY"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right" id="first">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam2"></iframe>
-									<ul class="actions">
-										<li><a href="#second" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-							</section>
+</head>
+<body class="no_padd">
+    <header class="fixed">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 offset-lg-4 col-8">
+                        <a href="index.html" class="logo full-width"><img src="./images/moad-logo.png" alt="logo"></a>
+                    </div>
+                    <div class="col-4 d-block text-right">
+                        <div class="menu_toggle_main"><i class="fas fa-bars"></i></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mob_menu d-block">
+        <a href="./index.html" class="mob_logo">Climate Lens WebXR App</a>
+    </div>
+    <!-- Content -->
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right" id="second">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam3"></iframe>
-									<ul class="actions">
-										<li><a href="#third" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-							</section>
-						<!-- Panel (Banner) -->
-							<section class="panel banner right" id="third">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam4"></iframe>
-									<ul class="actions">
-										<li><a href="#fourth" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-                            </section>
-                            						<!-- Panel (Banner) -->
-							<section class="panel banner right" id="fourth">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam5"></iframe>
-									<ul class="actions">
-										<li><a href="#fifth" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-                            </section>
-                            						<!-- Panel (Banner) -->
-							<section class="panel banner right" id="fifth">
-								<div class="content color0 span-3-75">
-									<iframe src="https://apps.8thwall.com/tcibwnye/ARCam6"></iframe>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/01.png" alt="" />
-								</div>
-							</section>
-						<!-- Copyright -->
-							<div class="copyright">&copy; 2019 -- 6ccmedia.com</div>
+    <!-- If your app only interacts with image targets and not the world, disabling world tracking can improve speed. -->
+    <a-scene
+    antialias="true"
+    xrweb="disableWorldTracking: true"
+    gesture-detector
+    xrextras-almost-there
+    xrextras-loading
+    xrextras-runtime-error
+    photo-mode style="z-index: 0;"
+    class="border_scene">
+        <a-assets>
+            <a-asset-item id="water1-glb" src="./assets/models/water-rise7.glb"></a-asset-item>
+            <a-asset-item id="water2-glb" src="./assets/models/water-lower-bulb.glb"></a-asset-item>
+            <a-asset-item id="water3-glb" src="./assets/models/water-lower-burger.glb"></a-asset-item>
+            <a-asset-item id="water4-glb" src="./assets/models/water-lower-transport.glb"></a-asset-item>
+            <a-asset-item id="water5-glb" src="./assets/models/waste.glb"></a-asset-item>
+            <a-asset-item id="water6-glb" src="./assets/models/wind.glb"></a-asset-item>
+        </a-assets>
 
-					</div>
+        <a-camera id="camera" raycaster="objects: .cantap"
+        cursor="fuse: false; rayOrigin: mouse;" position="0 4 10"> </a-camera>
+        <a-light type="ambient" intensity="1"></a-light>
+        <!-- Add extra lighting to highlight the 3d geometry of the image frame. -->
+        <a-light type="directional" intensity="1" target="#frame" position="1.5 0.6 2.5"> </a-light>
+        <a-entity id="water1" position="-0.5 0 -2" class="cantap" hold-drag two-finger-spin pinch-scale scale="0.016 0.016 0.016" rotation="0 0 0" gltf-model="#water1-glb"></a-entity>
+        
+        <a-entity
+        id="ground"
+        class="cantap"
+        geometry="primitive: box"
+        material="color: #ffffff; transparent: true; opacity: 0.0"
+        scale="1000 2 1000"
+        position="0 -1 0">
+      </a-entity>
+    </a-scene>
 
-			</div>
+    <div class="select_out full_h" style="z-index: 20; position: initial;">
+        <div class="select_list">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-1 col-2 text-center btn-container" id="resetPositionContainer">
+                        <a id="resetPosition" href="#">
+                            <img src="./images/reposition.png">
+                        </a>
+                    </div>
+                    <div class="col-4 offset-2 text-center btn-container" id="shutterButtonContainer">
+                        <p>Drag and Snap</p>
+                        <a id="screenshotBtn" class="select_modal primary-button" href="#">
+                            <img src="./images/camera-white.png">
+                        </a>
+                    </div>
+                    <div class="col-2 offset-2 text-center btn-container" id="changeSkinContainer">
+                        <a id="changeSkin" href="#" class="pattern-select pattern_1">
+                            <!-- <img id="skinImage" src="./images/logo2-pattern.png"> -->
+                        </a>
+                    </div>
+                    <!-- <div class="col-3 text-right btn-container"><a id="shareBtn" class="block_item share_item secondary-button" href="#"><img class="active " src="images/share.png" alt="icon"><img class="de_active d-none" src="images/link.png" alt="icon"></a></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
+    <footer class="fixed d-none">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-12 text-center">
+                    <div class="debug-text" style="display: none; color: white; font-size: 8px;">
+                        <span id="debug-text-status-1">&nbps;</span>
+                        <span id="debug-text-status-2">&nbps;</span>
+                        <span id="debug-text-status-3">&nbps;</span>
+                    </div>
+                    <a href="index.html" class="logo full-width">Climate Lens WebXR App</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
-	</body>
+    <!-- App Interfaces -->
+    <script type="text/javascript" src="./assets/js/interfaces.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            current_model = 1;
+            model_el = $('#logo1');
+            init_position = [-0.5, 0, -2.01];
+            patterns = ['./images/logo1-pattern.jpg', './images/logo2-pattern.jpg', './images/logo3-pattern.jpg']
+
+            $('#resetPosition').on('click', function(e) {
+                // console.log(model_el);
+                model_el.attr('position', init_position[0] + ' ' + init_position[1] + ' ' + init_position[2]);
+                init_position[2] -= 0.01;
+                model_el.attr('scale', '0.016 0.016 0.016');
+                // console.log("Reset position of object.");
+                XR.XrController.recenter()
+            })
+            $('#changeSkin').on('click',function(e) {
+                e.preventDefault();
+                
+                model_id = model_el.attr('gltf-model');
+                skin_image = $('#skinImage');
+                skin_path = skin_image.attr('src');
+                // console.log(skin_path);
+
+                // console.log('Model element found: ' );
+                // console.log(model_id);
+                // console.log(model_el);
+                
+                switch(current_model) {
+                    case 1: 
+                        model_el.attr('gltf-model', '#logo2-glb');
+                        // console.log('swapped image');
+                        // console.log(skin_image);
+                        $('#changeSkin').attr('class', 'pattern-select pattern_2');
+                        current_model++;
+                        break;
+                    case 2:
+                        model_el.attr('gltf-model', '#logo3-glb');
+                        $('#changeSkin').attr('class', 'pattern-select pattern_3');
+                        current_model++;
+                        break;
+                    case 3:
+                        model_el.attr('gltf-model', '#logo1-glb');
+                        $('#changeSkin').attr('class', 'pattern-select pattern_1');
+                        current_model = 1;
+                        break;
+                    default: 
+                        model_el.attr('gltf-model', '#logo1-glb');
+                        $('#changeSkin').attr('class', 'pattern-select pattern_2');
+                        current_model = 1;
+                        // console.log('unable to determine proper switch, moving back to 1');
+                }
+                // console.log('switchedlogo');
+            })
+            
+            
+        });
+    </script>
+
+</body>
 </html>
