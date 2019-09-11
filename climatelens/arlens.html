@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/style.css?v=201905161239">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <script defer src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
     <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
@@ -21,8 +23,12 @@
     <script src="./assets/js/pinch-scale.js"></script>
     <script src="./assets/js/two-finger-spin.js"></script>
     <!-- <script src="./assets/js/photomode.js"></script> -->
+
+        <script src="//cdn.8thwall.com/web/aframe/aframe-extras-4.2.0.min.js"></script>
     <script
     src="//apps.8thwall.com/xrweb?appKey=aevgSiSSUexZMFX0f2RV0lfZ8cw7b9xTUdRHLxtInhWxnO2JG8Qa4Iw1BKaD5cgxsOPqf7"></script>
+
+    <script src="./assets/js/dance.js?v=201905161239"></script>
     
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -31,7 +37,7 @@
     <header class="fixed">
         </header>
         <div class="mob_menu d-block">
-        <a href="./index.html" class="mob_logo">Climate Lens WebXR App</a>
+        <a href="./index.html" class="mob_logo"><h4>Climate Lens WebXR App</h4></a>
     </div>
     <!-- Content -->
 
@@ -43,60 +49,35 @@
     xrextras-almost-there
     xrextras-loading
     xrextras-runtime-error
-    style="z-index: 0;"
-    class="border_scene">
-        <a-assets>
-            <a-asset-item id="water1-glb" src="./assets/models/water-rise7.glb"></a-asset-item>
-            <a-asset-item id="water2-glb" src="./assets/models/water-lower-bulb.glb"></a-asset-item>
-            <a-asset-item id="water3-glb" src="./assets/models/water-lower-burger.glb"></a-asset-item>
-            <a-asset-item id="water4-glb" src="./assets/models/water-lower-transport.glb"></a-asset-item>
-            <a-asset-item id="water5-glb" src="./assets/models/water-lower-waste.glb"></a-asset-item>
-            <a-asset-item id="water6-glb" src="./assets/models/water-lower-wind.glb"></a-asset-item>
-        </a-assets>
+    photo-mode style="z-index: 0;">
+    
+      <a-assets>
+        <a-asset-item id="water-glb" src="./assets/models/water-rise7.glb"></a-asset-item>
+      </a-assets>
+      <a-camera id="camera" position="0 8 8"></a-camera>
 
-        <a-camera id="camera" raycaster="objects: .cantap"
-        cursor="fuse: false; rayOrigin: mouse;" position="0 4 10"> </a-camera>
-        <a-light type="ambient" intensity="1"></a-light>
-        <!-- Add extra lighting to highlight the 3d geometry of the image frame. -->
-        <a-light type="directional" intensity="1" target="#frame" position="1.5 0.6 2.5"> </a-light>
-        <a-entity id="water1" position="-0.5 0 -2" class="cantap" hold-drag two-finger-spin pinch-scale scale="0.016 0.016 0.016" rotation="0 0 0" gltf-model="#water1-glb" animation-mixer="loop: repeat"></a-entity>
-        
-        <a-entity
-        id="ground"
-        class="cantap"
-        geometry="primitive: box"
-        material="color: #ffffff; transparent: true; opacity: 0.0"
-        scale="1000 2 1000"
-        position="0 -1 0">
-      </a-entity>
+      <a-entity light="type: ambient; intensity: 2;" position="1 4.3 -18"></a-entity>
+        <a-entity id="water" position="-0.5 0 -2" scale="1 1 1" class="cantap" hold-drag two-finger-spin pinch-scale gltf-model="#water-glb" animation-mixer="loop: repeat"></a-entity>
+      
+      
     </a-scene>
+    <section class="panel">
+<div class="inner">
+									<ul class="grid-icons three connected">
+										<li><a href="arlens.html"><span class="icon"><img src="images/water.svg" alt="" style="width: 70px !important;"/><span class="label">Lorem</span></span></a></li>
 
-    <div class="select_out full_h" style="z-index: 20; position: initial;">
-        <div class="select_list">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-1 col-2 text-center btn-container" id="resetPositionContainer">
-                        <a id="resetPosition" href="#">
-                            <img src="./images/reposition.png">
-                        </a>
-                    </div>
-                    <div class="col-4 offset-2 text-center btn-container" id="shutterButtonContainer">
-                        <p>Drag and Snap</p>
-                        <a id="screenshotBtn" class="select_modal primary-button" href="#">
-                            <img src="./images/camera-white.png">
-                        </a>
-                    </div>
-                    <div class="col-2 offset-2 text-center btn-container" id="changeSkinContainer">
-                        <a id="changeSkin" href="#" class="pattern-select pattern_1">
-                            <!-- <img id="skinImage" src="./images/logo2-pattern.png"> -->
-                        </a>
-                    </div>
-                    <!-- <div class="col-3 text-right btn-container"><a id="shareBtn" class="block_item share_item secondary-button" href="#"><img class="active " src="images/share.png" alt="icon"><img class="de_active d-none" src="images/link.png" alt="icon"></a></div> -->
-                </div>
-            </div>
-        </div>
-    </div>
+										<li><a href="arlens3.html"><span class="icon"><img src="images/bulb.svg" alt="" style="width: 70px !important;"/><span class="label">Ipsum</span></span></a></li>
 
+										<li><a href="arlens4.html"><span class="icon"><img src="images/hamburger.svg" alt="" style="width: 70px !important;"/><span class="label">Dolor</span></span></a></li>
+
+										<li><a href="arlens4.html"><span class="icon"><img src="images/transportation.svg" alt="" style="width: 70px !important;"/><span class="label">Sit</span></span></a></li>
+
+										<li><a href="arlens5.html"><span class="icon"><img src="images/waste.svg" alt="" style="width: 70px !important;"/><span class="label">Amet</span></span></a></li>
+
+										<li><a href="arlens6.html"><span class="icon"><img src="images/turbine.svg" alt="" style="width: 70px !important;"/><span class="label">Nullam</span></span></a></li>
+									</ul>
+                                </div>
+                                </section>
     <footer class="fixed d-none">
         <div class="container">
             <div class="row justify-content-center">
